@@ -1,0 +1,20 @@
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">zepsulosie.pl</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" [collapse]="isCollapsed">
+          <ul class="nav navbar-nav nav-collapse">
+            <li><a routerLink="/" >Zgłoś awarię!</a></li>
+            <li><a routerLink="/jak-to-dziala">Jak to działa?</a></li>
+            <li><a routerLink="/kontakt">Kontakt</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
