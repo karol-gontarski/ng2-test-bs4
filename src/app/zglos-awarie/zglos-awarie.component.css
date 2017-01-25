@@ -1,6 +1,9 @@
-.zglos-awarie {
-    
+.zglos-awarie {    
     min-height: 1024px;
+}
+
+ol {
+    font-size: 2em;
 }
 
 .jumbotron {
