@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 import { AlertModule,CollapseModule } from 'ng2-bootstrap'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -28,6 +30,9 @@ import { ZglosAwarieComponent } from './zglos-awarie/zglos-awarie.component';
     HttpModule,
     AlertModule.forRoot(),
     CollapseModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDJkClvlZDsfU7BKGCVCl6B3GOnbhqK38U'
+    }),
     AppRoutingModule
   ],
   providers: [],
