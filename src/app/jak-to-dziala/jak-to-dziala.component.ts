@@ -1,17 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-
+import { GoogleGeocodingService } from '../google-geocoding.service'
 @Component({
   selector: 'app-jak-to-dziala',
   templateUrl: './jak-to-dziala.component.html',
-  styleUrls: ['./jak-to-dziala.component.css']
+  styleUrls: ['./jak-to-dziala.component.css'],
+  providers: [GoogleGeocodingService]
 })
 export class JakToDzialaComponent implements OnInit {
-  title: string = 'My first angular2-google-maps project';
-  lat: number = 51.678418;
-  lng: number = 7.809007;
-  constructor() { }
+  address: string;
+  lat: number;
+  lng: number;
+
+  
+  constructor(private geocode : GoogleGeocodingService) { 
+    this.address = 'Al. Niepodległości 75/35 Warszawa';
+    this.lat = 52.678418;
+    this.lng = 15.809007;
+  }
 
   ngOnInit() {
+    this.geocode.geocode(this.address);
   }
 
 }

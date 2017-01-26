@@ -1,14 +1,17 @@
 <div class="row jak-to-dziala">
-  <div class="col-md-10 col-md-offset-1"> 
+  <div class="col-md-5 col-md-offset-1"> 
     
-    <h1>{{ title }}</h1>
+    <h1>{{ address }}</h1>
 
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
-
+<input type="text"  class="form-control" id="address"
+       required
+       [(ngModel)]="address" name="address">
 <sebm-google-map [latitude]="lat" [longitude]="lng">
   <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
 </sebm-google-map>
     
      </div>
+     <div class="col-md-5"></div>
 </div>
